@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <table>
+    <thead>
+      <tr>
+        <th>cliente</th>>
+        <th>data</th>
+        <th>serviço</th>>
+      </tr>
+    </thead>
+    <tbody>
+    {% for a in a %}
+      <tr>
+        <td>{{ a.nome_clientes }}</td>
+        <td>{{ a.data }}</td>
+        <td>{{ a.serviço }}</td>
+        <td>{{ a.numero_cliente }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

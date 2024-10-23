@@ -1,0 +1,45 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Lista de espera</title>
+</head>
+
+<body>
+
+  <header>
+    <div>
+      <div class="header-h1">
+        <h1>Lista de espera</h1>
+      </div>
+
+      <div class="btn-grid">
+          <form action="/agendar">
+            <button type="submit">
+              Agendar Hórario
+            </button>
+          </form>
+      </div>
+    </div>
+
+  </header>
+
+  <div class="notfy">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul id="messages" class="list-unstyled">
+                {% for message in messages %}
+                    <li class="alert alert-success">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+  </div>
+
+  <div class="conteudo">
+      <h1>{{ titulo }}</h1>
+      {% block content %}
+      {% endblock %}
+  </div>
+
+</body>

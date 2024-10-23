@@ -1,0 +1,29 @@
+
+
+  <form method="POST" action="/agendado" >
+    <p>
+      <label for="nome">Nome: </label>
+      <input class="form-control" type="name" name="nome" required>
+    </p>
+    <p>
+      <label for="numero">Numero de telefone: </label>
+      <input class="form-control" type="number" name="numero" required>
+    </p>
+    <p>
+      <label for="serviço">Serviço: </label>
+      <select class="form-control" name="serviço" required>
+        <option value="lavagem">Lavagem</option>
+        <option value="Pintura">Pintura</option>
+        <option value="hidratação">hidratação</option>
+      </select>
+    </p>
+    <p>
+      <label for="data">Data e Hora do agendamento: </label>
+      <input class="form-control" type="datetime-local" name="data" required>
+    </p>
+
+    <p>
+      <button class="btn-agendamento" type="submit">Finalizar cadastro</button>
+    </p>
+
+  </form>
